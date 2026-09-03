@@ -16,7 +16,10 @@ ML PROJECT
 ├── Stroke prediction dataset
 │   └── healthcare-dataset-stroke-data.csv
 ├── notebooks
-│   └── 01_EDA.ipynb
+│   ├── 01_EDA.ipynb
+│   └── 02_modeling.ipynb
+├── models
+│   └── stroke_model.pkl
 ├── reports
 │   └── EDA_Report.md
 ├── figures
@@ -60,6 +63,18 @@ You can also regenerate the analysis artifacts from the command line:
 ```bash
 python -m src.generate_eda
 ```
+
+## Phase 2: Model Training and Testing
+
+After installing the dependencies and activating `.venv`, run:
+
+```bash
+python -m src.train_model
+```
+
+This trains Logistic Regression and Random Forest pipelines, handles missing values and categorical encoding without data leakage, evaluates precision, recall, F1-score, ROC-AUC, and PR-AUC, tests several classification thresholds, and performs 5-fold stratified cross-validation. The selected pipeline is saved to `models/stroke_model.pkl`.
+
+You can also open `notebooks/02_modeling.ipynb` and run its single code cell. Model results are saved in `reports/ML_Model_Report.md`, `reports/model_metrics.csv`, `reports/threshold_metrics.csv`, and `reports/cross_validation_pr_auc.txt`.
 
 ## Results
 The current EDA shows that:

@@ -10,3 +10,5 @@ notebook
 ipykernel
 python-docx
 reportlab
+joblib
+tabulate

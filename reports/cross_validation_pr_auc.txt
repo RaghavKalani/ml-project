@@ -1,0 +1,2 @@
+5-fold stratified PR-AUC scores: 0.2272, 0.1843, 0.2055, 0.2331, 0.1340
+Mean PR-AUC: 0.1968
